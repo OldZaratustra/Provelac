@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import './ProductGrid.css';
 
 const ProductGrid = ({ categories, setSelectedProduct, isDarkMode }) => {
   return (
@@ -14,7 +15,7 @@ const ProductGrid = ({ categories, setSelectedProduct, isDarkMode }) => {
               } shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2`}
             >
               <img 
-                src={`/api/placeholder/400/300`} 
+                src={item.image ? `/assets/${item.image}` : null} 
                 alt={item.name}
                 className="w-full h-48 object-cover"
               />

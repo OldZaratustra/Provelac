@@ -1,3 +1,4 @@
+// filepath: /c:/Users/GERARDO/OneDrive/Escritorio/Provelac/provelac/src/components/FloatingNavigation.js
 import React from 'react';
 import { MoonStar, Sun } from 'lucide-react';
 

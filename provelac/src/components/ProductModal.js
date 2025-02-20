@@ -1,28 +1,31 @@
 import React from 'react';
+import './ProductModal.css';
 
 const ProductModal = ({ product, onClose, isDarkMode }) => {
   if (!product) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-      <div className={`max-w-2xl w-full ${isDarkMode ? 'bg-gray-800' : 'bg-white'} rounded-2xl overflow-hidden relative`}>
-        <button onClick={onClose} className="absolute top-4 right-4 text-gray-500 hover:text-gray-700">✕</button>
+    <div className="modal">
+      <div className={`modal-content ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}>
+        <button onClick={onClose} className="close-button">✕</button>
         <div className="p-8">
-          <img src={`/api/placeholder/600/400`} alt={product.name} className="w-full h-64 object-cover rounded-lg mb-6" />
-          <h2 className={`text-3xl font-bold mb-2 ${isDarkMode ? 'text-white' : 'text-blue-900'}`}>{product.name}</h2>
+          <img src={product.image ? `/path/to/images/${product.image}` : `/api/placeholder/600/400`} alt={product.name} className="product-image" />
+          <h2 className={`product-title ${isDarkMode ? 'text-white' : 'text-blue-900'}`}>{product.name}</h2>
           <div className="flex items-center mb-4">
-            <span className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>Origin: {product.origin}</span>
-            <span className="text-blue-500 font-bold ml-auto">{product.price}</span>
+            <span className={`product-origin ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>Origin: {product.origin}</span>
+            <span className="product-price">{product.price}</span>
           </div>
-          <p className={`mb-6 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>{product.fullDescription}</p>
-          <div className="mb-6">
-            <h3 className={`font-bold mb-2 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Perfect Pairings</h3>
-            <ul className="list-disc list-inside">
-              {product.pairings.map((pairing, idx) => (
-                <li key={idx} className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>{pairing}</li>
-              ))}
-            </ul>
-          </div>
+          <p className={`product-description ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>{product.description}</p>
+          {product.pairings && product.pairings.length > 0 && (
+            <div className="mb-6">
+              <h3 className={`pairings-title ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Perfect Pairings</h3>
+              <ul className="pairings-list">
+                {product.pairings.map((pairing, idx) => (
+                  <li key={idx} className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>{pairing}</li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       </div>
     </div>

@@ -1,0 +1,17 @@
+/provelac/provelac/src/styles/CheeseWebsite.css
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.bg-gray-900 {
+  background-color: #1a202c;
+}
+
+.bg-gradient-to-br {
+  background-image: linear-gradient(to bottom right, #ebf8ff, #ffffff);
+}
+
+.transition-colors {
+  transition: background-color 0.3s ease;
+}

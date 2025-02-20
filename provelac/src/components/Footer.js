@@ -1,4 +1,6 @@
+// filepath: /c:/Users/GERARDO/OneDrive/Escritorio/Provelac/provelac/src/components/Footer.js
 import React from 'react';
+import './Footer.css';
 
 const Footer = ({ isDarkMode }) => {
   return (
