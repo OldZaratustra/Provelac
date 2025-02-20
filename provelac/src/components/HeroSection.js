@@ -12,8 +12,8 @@ const HeroSection = ({ isDarkMode }) => {
       </div>
       <div className="max-w-6xl mx-auto px-4 text-center relative z-10">
         <h1 className={`text-5xl md:text-7xl font-bold mb-6 ${isDarkMode ? 'text-white' : 'text-blue-900'}`}>
-          Discover the Art of
-          <span className="block text-blue-500">Fine Cheese</span>
+          Discover the Art of 
+          <span className="block text-blue-500"> Provelac</span>
         </h1>
         <p className={`text-xl md:text-2xl ${isDarkMode ? 'text-gray-300' : 'text-gray-600'} max-w-2xl mx-auto`}>
           Journey through our curated selection of artisanal cheeses, crafting supplies, and premium accessories
