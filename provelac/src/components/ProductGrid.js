@@ -15,21 +15,21 @@ const ProductGrid = ({ categories, setSelectedProduct, isDarkMode }) => {
               } shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2`}
             >
               <img 
-                src={item.image ? `/assets/${item.image}` : null} 
-                alt={item.name}
+                src={item.fotografia ? `/assets/${item.fotografia}` : `/api/placeholder/400/300`} 
+                alt={item.nombre}
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
                 <div className="flex justify-between items-start mb-4">
                   <h3 className={`text-2xl font-bold ${isDarkMode ? 'text-white' : 'text-blue-900'}`}>
-                    {item.name}
+                    {item.nombre}
                   </h3>
                   <span className="text-lg font-bold text-blue-500">
-                    {item.price}
+                    {item.price || 'N/A'}
                   </span>
                 </div>
                 <p className={`${isDarkMode ? 'text-gray-400' : 'text-gray-600'} mb-6`}>
-                  {item.description}
+                  {item.descripcion}
                 </p>
                 <div className="flex justify-between items-center">
                   <span className={`text-sm ${isDarkMode ? 'text-gray-500' : 'text-gray-400'}`}>

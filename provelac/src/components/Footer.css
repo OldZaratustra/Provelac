@@ -5,25 +5,67 @@
 footer {
   padding: 3rem 0;
   margin-top: 5rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-footer h3 {
+footer.dark {
+  background-color: #1a202c; /* Gray-900 */
+  border-top: 1px solid #2d3748; /* Gray-800 */
+}
+
+footer.light {
+  background-color: #ffffff; /* White */
+}
+
+footer .title {
   font-size: 1.25rem;
   font-weight: bold;
   margin-bottom: 1rem;
+  transition: color 0.3s ease;
 }
 
-footer p {
+footer.dark .title {
+  color: #ffffff; /* White */
+}
+
+footer.light .title {
+  color: #2b6cb0; /* Blue-900 */
+}
+
+footer .description {
   color: var(--text-color);
 }
 
-footer a {
+footer .section-title {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+footer.dark .section-title {
+  color: #ffffff; /* White */
+}
+
+footer.light .section-title {
+  color: #2d3748; /* Gray-900 */
+}
+
+footer .link {
   color: var(--link-color);
   transition: color 0.3s;
 }
 
-footer a:hover {
+footer .link:hover {
   color: var(--hover-link-color);
+}
+
+footer .social-link {
+  color: #4299e1; /* Blue-500 */
+  transition: color 0.3s;
+}
+
+footer .social-link:hover {
+  color: #3182ce; /* Blue-600 */
 }
 
 footer .grid {
